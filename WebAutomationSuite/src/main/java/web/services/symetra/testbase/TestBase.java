@@ -35,6 +35,7 @@ public class TestBase {
 		config_properties = new Properties();
 		config_properties.load(config_file);
 		browser = config_properties.getProperty("browser").trim();
+		System.out.println("Browser :"+browser);
 		URL = config_properties.getProperty("URL").trim();
 		version = config_properties.getProperty("version").trim();
 		}catch (FileNotFoundException e) {
@@ -72,8 +73,9 @@ public class TestBase {
 		    System.out.println("Browser version : "+v);
 			
 		}else if(browser.equalsIgnoreCase("FIREFOX")) {
-			WebDriverManager.firefoxdriver().version(version).setup();
+			WebDriverManager.firefoxdriver().setup();
 			this.driver = new FirefoxDriver();
+			System.out.println("Lanuching : FIREFOX");
 		}else if(browser.equalsIgnoreCase("SAFARI")) {
 			
 		}else if (browser.equalsIgnoreCase("IE")){

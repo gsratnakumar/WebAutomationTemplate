@@ -21,7 +21,7 @@ jobs:
       - run: mvn clean test -DsuiteXmlFile=testng.xml
       
       - store_artifacts:
-          path: ./WebAutomationTemplate/TestReport
+          path: TestReport
 workflows:
   version: 2
   build-test-deploy:

@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     
-    working_directory: ~/WebAutomationSuite/WebAutomationSuite
+    working_directory: ~/WebAutomationSuite
 
     docker:
       - image: sureifylabs/sureify-automation:firstimage

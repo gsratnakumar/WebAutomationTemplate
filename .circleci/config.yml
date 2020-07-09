@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     
-    working_directory: ~/WebAutomationSuite/WebAutomationSuite
+    working_directory: ~/WebAutomationSuite
 
     docker:
       - image: sureifylabs/sureify-automation:firstimage
@@ -13,16 +13,16 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: ./WebAutomationSuite/WebAutomationSuite-{{ checksum "pom.xml" }}
+          key: cd WebAutomationSuite-{{ checksum "pom.xml" }}
       
       - run: mvn dependency:go-offline
       
       - save_cache:
           paths:
             - ~/.m2
-          key: ./WebAutomationSuite/WebAutomationSuite-{{ checksum "pom.xml" }}
+          key: cd WebAutomationSuite-{{ checksum "pom.xml" }}
       
-      - run: mvn clean test -DsuiteXmlFile=testng.xml
+      - run: cd WebAutomationSuite mvn clean test -DsuiteXmlFile=testng.xml
       
       - store_artifacts:
           path: ./WebAutomationSuite/TestReport

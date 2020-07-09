@@ -11,16 +11,16 @@ jobs:
     steps:
 
       - checkout
-      - run: cd WebAutomationSuite
+
       - restore_cache:
-          key: WebAutomationSuite-{{ checksum "pom.xml" }}
+          key: WebAutomationSuite/WebAutomationSuite-{{ checksum "pom.xml" }}
       
       - run: mvn dependency:go-offline
       
       - save_cache:
           paths:
             - ~/.m2
-          key: WebAutomationSuite-{{ checksum "pom.xml" }}
+          key: WebAutomationSuite/WebAutomationSuite-{{ checksum "pom.xml" }}
       
       - run: cd WebAutomationSuite mvn clean test -DsuiteXmlFile=testng.xml
       

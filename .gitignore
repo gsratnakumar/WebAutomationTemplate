@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /target/
 /FailedTestsScreenshots/
 /PassedTestsScreenshots/
@@ -5,3 +6,12 @@
 /bin/
 /test-output/
 .settings
+=======
+/bin/
+.classpath
+/target/
+/TestReport/
+/PassedTestsScreenshots/
+/FailedTestScreenshots/
+/test-output/
+>>>>>>> master

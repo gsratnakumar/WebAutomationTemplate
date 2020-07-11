@@ -28,8 +28,8 @@ jobs:
         
     - name: Install chromedriver and geckodriver (Firefox Webdriver)
       run: |
-       drivers install chromedriver
-       drivers install geckodriver
+       install chromedriver drivers
+       install geckodriver  drivers
        
     - name: Cache Maven packages
       uses: actions/cache@v2

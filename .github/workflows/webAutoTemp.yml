@@ -27,8 +27,8 @@ jobs:
         sudo apt-get install firefox
     - name: Install chromedriver and geckodriver (Firefox Webdriver)
       run: |
-        ./usr/bin/ install chromedriver 
-        ./usr/bin/ install geckodriver  
+        seleniumbase install chromedriver 
+        seleniumbase install geckodriver  
            
     - name: Cache Maven packages
       uses: actions/cache@v2

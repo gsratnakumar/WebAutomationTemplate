@@ -1,0 +1,7 @@
+/bin/
+.classpath
+/target/
+/TestReport/
+/PassedTestsScreenshots/
+/FailedTestScreenshots/
+/test-output/

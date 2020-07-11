@@ -25,12 +25,7 @@ jobs:
       run: |
         sudo apt-get install google-chrome-stable
         sudo apt-get install firefox
-        
-    - name: Install chromedriver and geckodriver (Firefox Webdriver)
-      run: |
-        WebAutomationTemplate install chromedriver 
-        WebAutomationTemplate install geckodriver  
-       
+           
     - name: Cache Maven packages
       uses: actions/cache@v2
       with:
